@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <!--
+    <form>
+        <input type="button" id="buttonOK" value="OK">
+    </form>
+    
+    <p>Click "Disable" / "Enable" button to disable / enable from element</p>
+    <button onclick="disableElement()">Disable</button>
+    <button onclick="enableElement()">Enable</button>
+    -->
+    <!--
+    <form>
+        <button id="button01" name="nameofthebutton" type="submit" value="test">TEST</button>
+    </form>
+    <p>click try button to get the name of the test button</p>
+    <button onclick="getNameOfButton()">Try</button>
+    <p id="test"></p>
+-->
+    <!--
+    <form id="form1">
+    
+        First name:
+        <input type="text" name="fname"><br><br>
+        Last name:
+        <input type="text" name="lname"><br><br>
+        <input type="button" onclick="mySubmit()" value="Submit">
+        <input type="button" onclick="myReset()" value="Reset">
+    
+    </form>
+    -->
+    <!--
+    <form id="form1">
+    
+        First name:
+        <input type="text" name="fname" value="Dusan"><br><br>
+        Last name:
+        <input type="text" name="lname" value="Arizanovic"><br><br>
+    
+    </form>
+    
+    <p>click to the test button to see values of all elements in the form</p>
+    <button onclick="getValues()">Test</button>
+    <p id="test"></p>
+-->
+    <!--
+    <form>
+        <input type="radio" name="fruits" id="apples">apples<br/>
+        <input type="radio" name="fruits" id="oranges">oranges<br/>
+    </form>
+    
+    <button onclick="setChecked()">check oranges</button>
+    <button onclick="setUnchecked()">Uncheck oranges</button>
+    
+    <p>is checked?</p>
+    <button onclick="isChecked()">is checked?</button>
+    <p id="test"></p>
+    -->
+<!--
+    <form>
+        <table style="width: 500px; margin: 10px auto; border: 1px solid black">
+            <tr>
+                <th colspan="2">Regular expression</th>
+            </tr>
+            <tr>
+                <td>name and lastname</td>
+                <td><input type="text" id="tblName" onkeyup="checkNameLastName();">
+                    <br /><span id="lName"></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>your id number</td>
+                <td><input type="text" id="tblId" onkeyup="checkId();">
+                    <br /><span id="lid"></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>your car registration</td>
+                <td><input type="text" id="tblReg" onkeyup="checkReg();">
+                    <br /><span id="lReg"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+-->
+    
+    <form>
+        <table style="width: 500px; margin: 10px auto; border: 1px solid black">
+            <tr>
+                <th colspan="2">Input data validaiton</th>
+            </tr>
+            <tr>
+                <td>name and lastname</td>
+                <td><input type="text" id="tblName" onkeyup="checkNameLastName();">
+                    <br /><span id="lName"></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>your phone number</td>
+                <td><input type="text" id="tblNum" onkeyup="checkNum();">
+                    <br /><span id="phNum"></span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Zip code (RS)</td>
+                <td><input type="text" id="tblZip" onkeyup="checkZip();">
+                    <br /><span id="Zip"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <script type="text/javascript">
+        
+        function checkNameLastName(){
+            var name = document.getElementById("tblName");
+            var lname = document.getElementById("lName");
+            var regExpName = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{3,19}$/;
+            if(!regExpName.test(name.value)){
+                lname.style.color="red";
+                lname.innerHTML="NOT OK";
+            }else{
+                lname.style.color="green";
+                lname.innerHTML="OK";
+            }
+            
+        }
+        
+        function checkNum(){
+            var num = document.getElementById("tblNum");
+            var phNum = document.getElementById("phNum");
+            var regExpName = /^(\+381)?(\s|-)?6(([0-6]|[8-9])\d{8}|(77|78)\d{7}){1}$/;
+            if(!regExpName.test(num.value)){
+                phNum.style.color="red";
+                phNum.innerHTML="NOT OK";
+            }else{
+                phNum.style.color="green";
+                phNum.innerHTML="OK";
+            }
+        }
+        
+         function checkZip(){
+            var reg = document.getElementById("tblZip");
+            var Zip = document.getElementById("Zip");
+            var regExpName = /^[0-9]{5}$/;
+            if(!regExpName.test(reg.value)){
+                Zip.style.color="red";
+                Zip.innerHTML="NOT OK";
+            }else{
+                Zip.style.color="green";
+                Zip.innerHTML="OK";
+            }
+        }
+        
+        /*
+        function checkNameLastName(){
+            var name = document.getElementById("tblName");
+            var lname = document.getElementById("lName");
+            var regExpName = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{3,19}$/;
+            if(!regExpName.test(name.value)){
+                lname.style.color="red";
+                lname.innerHTML="NOT OK";
+            }else{
+                lname.style.color="green";
+                lname.innerHTML="OK";
+            }
+            
+        }
+        
+        function checkId(){
+            var id = document.getElementById("tblId");
+            var lid = document.getElementById("lid");
+            var regExpName = /^[0-9]{13}$/;
+            if(!regExpName.test(id.value)){
+                lid.style.color="red";
+                lid.innerHTML="NOT OK";
+            }else{
+                lid.style.color="green";
+                lid.innerHTML="OK";
+            }
+        }
+        
+         function checkReg(){
+            var reg = document.getElementById("tblReg");
+            var lreg = document.getElementById("lReg");
+            var regExpName = /^[A-Z]{2}\-[0-9]{3,4}\-[A-Z]{2}$/;
+            if(!regExpName.test(reg.value)){
+                lreg.style.color="red";
+                lreg.innerHTML="NOT OK";
+            }else{
+                lreg.style.color="green";
+                lreg.innerHTML="OK";
+            }
+        }
+        */
+        
+        /*
+        function setChecked(){
+            document.getElementById("oranges").checked = true
+        }
+        function setUnchecked(){
+            document.getElementById("oranges").checked = false
+        }
+        function isChecked(){
+            var x=document.getElementById("oranges").checked;
+            document.getElementById("test").innerHTML = x;
+        }
+        */
+
+        /*
+        function getValues(){
+            var x = document.getElementById("form1");
+            var displayText = "";
+            
+            for(var i=0; i<x.length; i++){
+                displayText += x.elements[i].value + "<br/>"
+            }
+            document.getElementById("test").innerHTML = displayText;
+        }
+        */
+
+        /*
+        function mySubmit() {
+            document.getElementById("form1").submit();
+        }
+        function myReset() {
+            document.getElementById("form1").reset();
+        }
+        */
+
+        /*
+        function getNameOfButton(){
+            document.getElementById("test").innerHTML = document.getElementById("button01").name;
+        }
+        */
+
+        /*
+    function disableElement(){
+        document.getElementById("buttonOK").disabled = true;
+    }
+    function enableElement(){
+        document.getElementById("buttonOK").disabled = false;
+    }
+    */
+    </script>
+
+</body></html>
