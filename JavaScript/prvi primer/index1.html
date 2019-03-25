@@ -134,7 +134,7 @@
         function addressValidation(){
             var inputAdd = document.getElementById("inAddress");
             var outputAdd = document.getElementById("addVal");
-            var regExpName = /^[a-z]{2-20}$/;
+            var regExpName = /^[a-z]{2,20}\s[0-9]{1,3}$/;
             if(!regExpName.test(inputAdd.value)){
                 outputAdd.style.color="red";
                 outputAdd.innerHTML="NOT OK!!!"
