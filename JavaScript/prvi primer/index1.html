@@ -94,7 +94,7 @@
         </table>
     </form>
 -->
-    
+    <!--
     <form>
         <table style="width: 500px; margin: 10px auto; border: 1px solid black">
             <tr>
@@ -122,9 +122,31 @@
             </tr>
         </table>
     </form>
+    -->
     
+    <form>
+        <label for="inAddress">Address:</label>
+    <input type="text" id=inAddress onkeyup="addressValidation()"><br/>
+        <span id="addVal"></span>
+    </form>
     <script type="text/javascript">
         
+        function addressValidation(){
+            var inputAdd = document.getElementById("inAddress");
+            var outputAdd = document.getElementById("addVal");
+            var regExpName = /^[a-z]{2-20}$/;
+            if(!regExpName.test(inputAdd.value)){
+                outputAdd.style.color="red";
+                outputAdd.innerHTML="NOT OK!!!"
+                
+            }else{
+                outputAdd.style.color="green";
+                outputAdd.innerHTML="OK!"
+            }
+        }
+        
+        
+        /*
         function checkNameLastName(){
             var name = document.getElementById("tblName");
             var lname = document.getElementById("lName");
@@ -142,7 +164,7 @@
         function checkNum(){
             var num = document.getElementById("tblNum");
             var phNum = document.getElementById("phNum");
-            var regExpName = /^(\+381)?(\s|-)?6(([0-6]|[8-9])\d{8}|(77|78)\d{7}){1}$/;
+            var regExpName = /^(\+381)?(\s|-)?6(([0-6]|[8-9])\d{7}|(77|78)\d{7}){1}$/;
             if(!regExpName.test(num.value)){
                 phNum.style.color="red";
                 phNum.innerHTML="NOT OK";
@@ -164,7 +186,7 @@
                 Zip.innerHTML="OK";
             }
         }
-        
+        */
         /*
         function checkNameLastName(){
             var name = document.getElementById("tblName");
