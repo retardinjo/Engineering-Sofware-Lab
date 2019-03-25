@@ -1,0 +1,34 @@
+<html>
+	<title>Programatically change the radio button</title>
+<head>
+</head>
+<body>
+	<p>What fruit do you prefer</p>
+	<form>
+		<input type="radio" name="fruits" id="apples">Apples<br/>
+		<input type="radio" name="fruits" id="oranges">Oranges<br/>
+	</form>
+	
+	<button onclick="setChecked()">Check orange</button>
+	<button onclick="setUnchecked()">Uncheck orange</button>
+	
+	<p>Is the radio button Orange checked?</p>
+	<button onclick="isChecked()">Is Checked?</button>
+	
+	<p id="test"></p>
+	
+	<script type="text/javascript">
+		function setChecked(){
+			document.getElementById("oranges").checked = true;
+		}
+		function setUnchecked(){
+			document.getElementById("oranges").checked = false;
+		}
+		function isChecked(){
+			var x = document.getElementById("oranges").checked;
+			document.getElementById("test").innerHTML = x;
+		}
+	</script>
+	
+</body>
+</html>

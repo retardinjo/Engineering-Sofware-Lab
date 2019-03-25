@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Disabling the form element</title>
+</head>
+<body>
+	<form>
+		<input type="button" id="buttonOK" value="OK">
+	</form>
+	
+	<p>Click "Disable" / "Enable" button to disable / enable form element</p>
+	<button onclick="disableElement()">Disable</button>
+	<button onclick="enableElement()">Enable</button>
+	<script type="text/javascript">
+		function disableElement () {
+			document.getElementById("buttonOK").disabled = true;
+		}
+		function enableElement () {
+			document.getElementById("buttonOK").disabled = false;
+		}
+	</script>
+</body>
+</html>

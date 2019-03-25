@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>onblur event example</title>
+	<script type="text/javascript">
+		function transformToUpperCase(){
+			var field = document.getElementById("uname");
+			field.value = field.value.toUpperCase();
+		}
+	</script>
+</head>
+<body>
+	Please enter your name: <input type="text" id="uname" onblur="transformToUpperCase()">
+</body>
+</html>

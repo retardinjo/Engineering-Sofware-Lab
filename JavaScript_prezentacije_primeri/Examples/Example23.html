@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>Another basic form validation</title>
+	
+	<script type="text/javascript">
+		function validateForm(){
+			if(document.form1.Name.value == ""){
+				alert("Please enter your name");
+				document.form1.Name.focus();
+				return false;
+			}
+			
+			if(document.form1.Email.value == ""){
+				alert("Please enter your Email");
+				document.form1.Email.focus();
+				return false;
+			} else if (!validateEmail()) {
+				return false;
+			}
+			var x = document.form1.Zip.value;
+			if(x == "" || isNaN(x) || x.length != 5 ){
+				alert("Please enter your Zip code in format #####");
+				document.form1.Zip.focus();
+				return false;
+			}
+			
+			if(document.form1.Country.value == "-1"){
+				alert("Please provide your country");
+				return false;
+			}
+			
+			return true;
+		}
+		
+		function validateEmail(){
+			var email = document.form1.Email.value;
+			
+			var atposition = email.indexOf("@");
+			var dotposition = email.lastIndexOf(".");
+			
+			if (atposition < 1 || (dotposition - atposition) < 2) {
+				alert ("Mail is not in correct format");
+				document.form1.Email.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<form name="form1" action="/action.php" method="POST" onsubmit="return validateForm()">
+		<table cellspacing="2" cellpadding="2" border="1">
+			<tr>
+				<td>Name</td>
+				<td><input type="text" name="Name"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="Email"></td>
+			</tr>
+			<tr>
+				<td>Zip code</td>
+				<td><input type="text" name="Zip"></td>
+			</tr>
+			<tr>
+				<td>Country</td>
+				<td>
+					<select name="Country">
+						<option value="-1" selected>[choose yours]<option>
+						<option value="1">Serbia</option>
+						<option value="2">USA</option>
+						<option value="3">UK</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

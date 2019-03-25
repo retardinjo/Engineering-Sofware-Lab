@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Validating form with regex</title>
+	<script type="text/javascript">
+		function checkName(){
+			var name = document.getElementById("tblName");
+			var lname = document.getElementById("lName");
+			
+			var regExpName = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{2,19}$/;
+			
+			if (!regExpName.test(name.value)){
+				lname.style.color="red";
+				lname.innerHTML="Not ok";
+			} else {
+				lname.style.color="green";
+				lname.innerHTML="ok";
+			}
+		}
+		
+		function checkNumber(){
+			var number = document.getElementById("tblNumber");
+			var lnumber = document.getElementById("lNumber");
+			
+			var regExpNumber = /^[(]{0,1}[0-9]{3}[)]{0,1}[\s-]{0,1}[0-9]{3}[-]{0,1}[0-9]{4}$/;
+			
+			if (!regExpNumber.test(number.value)){
+				lnumber.style.color="red";
+				lnumber.innerHTML="Not ok";
+			} else {
+				lnumber.style.color="green";
+				lnumber.innerHTML="ok";
+			}
+		}
+		
+		function checkZip(){
+			var zip = document.getElementById("tblZip");
+			var lzip = document.getElementById("lZip")
+			
+			var regExpZip = /^[A-Z]{1,2}[0-9]{1,2}\s[0-9]{1}[A-Z]{2}$/;
+			
+			if (!regExpZip.test(zip.value)){
+				lzip.style.color="red";
+				lzip.innerHTML="Not ok";
+			}else {
+				lzip.style.color="green";
+				lzip.innerHTML="ok";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<table style="width:500px; margin:10px auto; border:1px solid #CCC">
+			<tr>
+				<th colspan="2">Input data validation</th>
+			</tr>
+			<tr>
+				<td>Name and Last name:</td>
+				<td>
+					<input type="text" id="tblName" onkeyup="checkName();">
+					<br/><span id="lName"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Your phone number:</td>
+				<td>
+					<input type="text" id="tblNumber" onkeyup="checkNumber();">
+					<br/><span id="lNumber"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Zip code (UK):</td>
+				<td>
+					<input type="text" id="tblZip" onkeyup="checkZip();">
+					<br/><span id="lZip"></span>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

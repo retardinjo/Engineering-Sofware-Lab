@@ -1,0 +1,42 @@
+<html>
+	<title>JavaScript Arrays</title>
+<head>
+</head>
+<body>
+	<h3>List of fruits:</h3>
+	<p id="testarrays"></p>
+	
+	Initial list:
+	<p id="testarrays2"></p>
+	
+	List after changing one element
+	<p id="testarrays3"></p>
+	
+	Adding one element
+	<p id="testarrays4"></p>
+	
+	<script type="text/javascript">
+		var fruits = ["Apple", "Banana", "Pear", "Orange"];
+		//how to get length of the array
+		var flength = fruits.length;
+		var text = "<ul>";
+		for (var i = 0; i < flength; i++){
+			text += "<li>" + fruits[i] + "</li>";
+		} 		
+		text += "</ul>";
+		document.getElementById("testarrays").innerHTML = text;
+		
+		//change the value of one element inside array
+				
+		document.getElementById("testarrays2").innerHTML = fruits;
+		
+		fruits[2] = "Plum";
+		document.getElementById("testarrays3").innerHTML = fruits;
+		
+		fruits.push("Lemon");
+		document.getElementById("testarrays4").innerHTML = fruits;
+		
+	</script>
+	
+</body>
+</html>

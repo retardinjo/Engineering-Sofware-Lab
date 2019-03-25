@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>onchange</title>
+	<script type="text/javascript">
+		function preferedLanguage(){
+			var prefered = document.getElementById("languages").value;
+			alert("You have selected the following language " + prefered);
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Choose which language you prefer:
+		<select id="languages" onchange="preferedLanguage()">
+			<option value="English">English</option>
+			<option value="Serbian">Serbian</option>
+			<option value="Russian">Russian</option>
+		</select>
+	</form>
+</body>
+</html>

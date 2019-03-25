@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Function arguments</title>
+</head>
+<body>
+	<h1>Finding the largest number</h1>
+	<p id="max"></p>
+	<script type="text/javascript">
+		function findMaximum() {
+			var maximum = -Infinity;
+			
+			for (var i = 0; i < arguments.length; i++){
+				if (arguments[i] > maximum) {
+					maximum = arguments[i];
+				}
+			}
+			return maximum;
+		}
+		
+		var max = findMaximum(2,333,77, -50, 89, 55555);
+		document.getElementById("max").innerHTML = "Maximum is: " + max;
+		
+	</script>
+</body>
+</html>

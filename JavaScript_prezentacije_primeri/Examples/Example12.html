@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Function arguments</title>
+</head>
+<body>
+	<h3>Finding the sum of all arguments</h3>
+	<p id="sum"></p>
+	<script type="text/javascript">
+		function sumAll () {
+			var sum = 0;
+			for (var i = 0; i < arguments.length; i++){
+				sum += arguments[i];
+			}
+			return sum;
+		}
+		
+		document.getElementById("sum").innerHTML = sumAll(34,55, 124,3,88);
+	</script>
+</body>
+</html>

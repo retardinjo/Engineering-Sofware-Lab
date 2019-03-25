@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>onselect event</title>
+	<script type="text/javascript">
+		function textSelected(){
+			document.getElementById("p1").innerHTML = "You have selected some text";
+		}
+	</script>
+</head>
+<body>
+	Some text: <input type="text" value="Hello World" onselect="textSelected()">
+	<p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Validating form with regex</title>
+	<script type="text/javascript">
+		function checkNameLastName(){
+			var name = document.getElementById("tblName");
+			var lname = document.getElementById("lName");
+			var regExpName = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{3,19}$/;
+		
+			if (!regExpName.test(name.value)){
+				lname.style.color="red";
+				lname.innerHTML="Not ok";
+			} else {
+				lname.style.color="green";
+				lname.innerHTML="ok!";
+			}						
+		}
+		
+		function checkId(){
+			var id = document.getElementById("tblId");
+			var lid = document.getElementById("lId");
+			var regExpName = /^[0-9]{13}$/;
+		
+			if (!regExpName.test(id.value)){
+				lid.style.color="red";
+				lid.innerHTML="Not ok";
+			} else {
+				lid.style.color="green";
+				lid.innerHTML="ok!";
+			}		
+		
+		}
+		
+		function checkReg(){
+			var reg = document.getElementById("tblReg");
+			var lreg = document.getElementById("lReg");
+			var regExpName = /^[A-Z]{2}\-[0-9]{3}\-[A-Z]{2}$/;
+		
+			if (!regExpName.test(reg.value)){
+				lreg.style.color="red";
+				lreg.innerHTML="Not ok";
+			} else {
+				lreg.style.color="green";
+				lreg.innerHTML="ok!";
+			}		
+		
+		}
+	
+	</script>
+</head>
+<body>
+	<form>
+		<table style="width:500px; margin:10px auto; border:1px solid #CCC">
+			<tr>
+				<th colspan="2">Regular expressions</th>
+			</tr>
+			<tr>
+				<td>Name and lastname:</td>
+				<td>
+					<input type="text" id="tblName" onkeyup="checkNameLastName();">
+					<br/><span id="lName"><span>
+				</td>
+			</tr>
+			<tr>
+				<td>Your ID number: </td>
+				<td>
+					<input type="text" id="tblId" onkeyup="checkId();">
+					<br/><span id="lId"><span>
+				</td>
+			</tr>
+			<tr>
+				<td>Your car registration: </td>
+				<td>
+					<input type="text" id="tblReg" onkeyup="checkReg();">
+					<br/><span id="lReg"><span>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

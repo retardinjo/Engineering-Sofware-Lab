@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Getting the elements of each element in the form</title>
+</head>
+<body>
+	<form id="form1">
+		First name: <br/>
+		<input type="text" name="fname" value="Dusan"><br/>
+		Last name: <br/>
+		<input type="text" name="lname" value="Markovic"><br/><br/>
+		<input type="submit" value="Submit">
+	</form>
+	
+	<p>click on the Test button to see the values of all elements in the form</p>
+	
+	<button onclick="getValues()">Test</button>
+	
+	<p id="test"></p>
+	
+	<script type="text/javascript">
+		function getValues(){
+			var x = document.getElementById("form1");
+			var displaytext = "";
+		
+			for (var i = 0; i < x.length; i++){
+				displaytext += x.elements[i].value + "<br/>"
+			}
+			document.getElementById("test").innerHTML = displaytext;
+		}
+	</script>
+</body>
+</html>

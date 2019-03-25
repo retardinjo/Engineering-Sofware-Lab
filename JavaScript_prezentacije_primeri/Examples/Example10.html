@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Function with less args than declared</title>
+	<script type="text/javascript">
+		function addition(a,b) { // if there is less parameters, missing would be set to undefined
+			if (a === undefined) {
+				a = 0;
+			}
+			if (b === undefined) {
+				b = 0;
+			}
+			var sum = a + b;
+			document.write(sum + "<br/>");
+		}
+				
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		addition(3,12); //normal calling of the function
+		addition(3,12,25); //calling with one more parameter than defined
+		addition(3); //calling with less args than defined
+		addition(); //calling with 0 params
+	</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>keyup vs keydown</title>
+	<script type="text/javascript">
+		function changeColor(color){
+			document.getElementById("message").style.background = color;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Write a message: <input type="text" id="message" onkeydown="changeColor('yellow')" onkeyup="changeColor('white')">
+	</form>
+</body>
+</html>
