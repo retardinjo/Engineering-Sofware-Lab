@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do12h</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/validation.js"></script>
+</head>
+
+<body>
+    <div id="inputForm">
+        <form action="http://cruise.ariwebsite.com/" method="get">
+
+            <label for="un">Username:</label>
+            <input id="un" type="text" name="username" onkeydown="usernameValidation()" required><br />           
+            <span id="unAlert"></span><br />
+
+            <label for="pass">Password:</label>
+            <input id="pass" type="password" name="password" onkeydown="passwordValidation()" required><br />
+            <span id="passAlert"></span><br />
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" onkeydown="emailValidation()" required><br />
+            <span id="emailAlert"></span><br />
+
+            
+            <label for="comment">Comment:</label>
+            <textarea id="comment" rows="4" cols="50">Comment...</textarea>
+            <br /><br />
+
+            <label for="gender">Gender:</label><br />           
+            <input id="gender" type="radio" name="genderradio">Male<br />
+            <input type="radio" name="genderradio">female<br />
+            <br />
+
+            <label for="country">Country:</label>
+            <select id="country" name="dropdownlist">
+                <option value="" selected disabled hidden>Choose your Country</option>
+                <option value="serbia">Serbia</option>
+                <option value="cuba">Cuba</option>
+                <option value="nicaragua">Nicaragua</option>
+            </select><br />
+
+            <input id="reset" type="reset" name="reset" value="reset"><br /><br /><br />
+            
+            <label for="agreeId">I agree:</label>
+            <input type="checkbox" id="agreeId">
+
+            <input id="submit" type="submit" value="submit" onclick="agreeFunction()"><br />
+
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
+

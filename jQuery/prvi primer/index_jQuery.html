@@ -7,6 +7,7 @@
     <title></title>
     
     <script>
+        
 
         
         /*
@@ -35,7 +36,7 @@
             });
         });
         */
-        
+        /*
         $(document).ready(function(){
 		$("button").click(function(){
 			$("#div1").fadeIn(2000);
@@ -43,9 +44,39 @@
 			$("#div3").fadeIn(4000);
 		});
 	});
+        */
+        
+                $(document).ready(function(){
+            $("button").click(function(){
+                $(".box").animate({
+                    width: "300px",
+                    height: "300px",
+                    marginLeft: "200px",
+                    borderWidth: "10px",
+                    opacity: 0.5
+                });
+            });
+        });
+        
         
     </script>
 </head>
+
+<body>
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #9d7ede;
+			margin-top: 30px;
+			border-style: solid;
+			border-color: #6f40ce; 
+        }
+    </style>
+    1<button type="button">Start animation</button>
+	<div class="box"></div>
+    
+        <!--
     <h1>Fade in effect with different params</h1>
 	
 	<button>Test effect</button><br/><br/>
@@ -55,7 +86,7 @@
 	<div id="div2" style="width:100px;height:100px;display:none;background-color:red"></div>
 	<br/>
 	<div id="div3" style="width:100px;height:100px;display:none;background-color:black"></div>
-    
+    -->
     <!--
     <h1>try to animate</h1>
     
@@ -80,7 +111,6 @@
     <button id="hide">hide</button>
     <button id="show">show</button>
 -->
-<body>
     
 </body>
 </html>
