@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>do12h</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="js/validation.js"></script>
 </head>
 
 <body>
     <div id="inputForm">
-        <form action="http://cruise.ariwebsite.com/" method="get">
+        <form action="http://cruise.ariwebsite.com/" method="get" onsubmit="return validate(this);">
 
             <label for="un">Username:</label>
             <input id="un" type="text" name="username" onkeydown="usernameValidation()" required><br />           
@@ -27,8 +30,11 @@
 
             
             <label for="comment">Comment:</label>
-            <textarea id="comment" rows="4" cols="50">Comment...</textarea>
+            <textarea id="comment" rows="4" cols="50" placeholder="Comment..."></textarea>
             <br /><br />
+            
+            <label for="datepicker">Date of birth:</label>
+            <input type="text" id="datepicker"><br />
 
             <label for="gender">Gender:</label><br />           
             <input id="gender" type="radio" name="genderradio">Male<br />
@@ -45,10 +51,10 @@
 
             <input id="reset" type="reset" name="reset" value="reset"><br /><br /><br />
             
-            <label for="agreeId">I agree:</label>
-            <input type="checkbox" id="agreeId">
+            <label for="agreeId">I agree with terms:</label>
+            <input type="checkbox" id="agreeId"><br /><br />
 
-            <input id="submit" type="submit" value="submit" onclick="agreeFunction()"><br />
+            <input id="submit" type="submit" value="submit"><br />
 
 
         </form>

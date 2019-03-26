@@ -5,7 +5,7 @@ function usernameValidation() {
     var regExpName = /^[a-z0-9_-]{3,15}$/;
     if (!regExpName.test(inputAdd.value)) {
         outputAdd.style.color = "red";
-        outputAdd.innerHTML = "NOT OK!!!"
+        outputAdd.innerHTML = "NOT OK!"
         submitDisable.disabled = true;
     } else {
         outputAdd.style.color = "green";
@@ -21,7 +21,7 @@ function passwordValidation() {
     var regExpName = /^[a-z0-9_-]{3,15}$/;
     if (!regExpName.test(inputAdd.value)) {
         outputAdd.style.color = "red";
-        outputAdd.innerHTML = "NOT OK!!!"
+        outputAdd.innerHTML = "NOT OK!"
         submitDisable.disabled = true;
     } else {
         outputAdd.style.color = "green";
@@ -37,7 +37,7 @@ function emailValidation() {
     var regExpName = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!regExpName.test(inputAdd.value)) {
         outputAdd.style.color = "red";
-        outputAdd.innerHTML = "NOT OK!!!"
+        outputAdd.innerHTML = "NOT OK!"
         submitDisable.disabled = true;
     } else {
         outputAdd.style.color = "green";
@@ -47,10 +47,25 @@ function emailValidation() {
 }
 
 
-function agreeFunction() {
+function disableSubmit() {
   var checkBox = document.getElementById("agreeId");
+    var submitDisable = document.getElementById("submit");
   if (!checkBox.checked == true){
-    alert("nije cekiran");
-      return false;
-  } 
+      submitDisable.disabled = true;
+  } else{
+      submitDisable.disabled = false;
+  }
 } 
+
+function validate(form) {
+    var checkBox = document.getElementById("agreeId");
+		if (!checkBox.checked == true){
+			alert('Sorry, you must accept the License Agreement before submitting.');
+			return false;
+		}
+		return true;
+	}
+
+$(function datePicker(){
+			$("#datepicker").datepicker();
+		});
