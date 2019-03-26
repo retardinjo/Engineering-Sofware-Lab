@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Droppable</title>
+	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<style>
+		#drag {
+			width: 100px;
+			height: 50px;
+			padding: 0.5em;
+			margin: 0px 5px 10px 0;
+		}
+		#drop1,#drop2,#drop3,#drop4{
+			width: 120px;
+			height: 90px;
+			padding: 0.5em;
+			float: left;
+			margin: 10px;
+		}
+	</style>
+	<script>
+		$(function() {
+			$("#drag").draggable();
+			
+			$("#drop1").droppable({
+				drop: function(event, ui){
+					$(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+				}
+			});
+			
+			$("#drop2").droppable({
+				disabled: "true",
+				drop: function(event, ui){
+					$(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+				}
+			});
+			
+			$("#drop3").droppable({
+				tolerance: 'touch',
+				drop: function(event, ui){
+					$(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+				}
+			});
+		
+			$("#drop4").droppable({
+				tolerance: 'fit',
+				drop: function(event, ui){
+					$(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="drag" class="ui-widget-content">
+		<p>Drag me around!</p>
+	</div>
+	<div id="drop1" class="ui-widget-header">
+		<p>Drop here</p>
+	</div>
+	<div id="drop2" class="ui-widget-header">
+		<p>Disabled, not possible to drop</p>
+	</div>
+	<div id="drop3" class="ui-widget-header">
+		<p>Tolerance on touch</p>
+	</div>
+	<div id="drop4" class="ui-widget-header">
+		<p>Tolerance fit</p>
+	</div>
+</body>
+</html>

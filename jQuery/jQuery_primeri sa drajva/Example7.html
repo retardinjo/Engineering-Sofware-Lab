@@ -1,0 +1,22 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("input").focus(function () {
+			$(this).css("background-color", "#CCCCCC");
+		});
+		$("input").blur(function () {
+			$(this).css("background-color", "#FFFFFF");
+		});
+	});
+	</script>
+</head>
+<body>
+	<form>
+		Name: <input type="text" name="fullname"><br/>
+		Email: <input type="text" name="email">
+	</form>
+	
+</body>
+</html>

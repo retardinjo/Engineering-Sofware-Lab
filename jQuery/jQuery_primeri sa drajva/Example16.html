@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>How to add Class to elements with JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		.page-header {
+			color: red;
+			text-transform: uppercase;
+		}
+		
+		.highlight {
+			background: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("h1").addClass("page-header");
+				$("p.hint").addClass("highlight");
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Title</h1>
+	<p>Today is a nice day</p>
+	<p class="hint"><strong>Tip:</strong> No rain today, we don't need an umbrella;</p>
+	<button type="button">Add style</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Fade and toggle together with different speeds</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		p {
+			padding:20px;
+			background: #DDA0DD;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".togglebtn").click(function(){
+				$("p.normal").fadeToggle();
+				$("p.very-fast").fadeToggle(50);
+				$("p.fast").fadeToggle("fast");
+				$("p.slow").fadeToggle("slow");
+				$("p.very-slow").fadeToggle(5000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button" class="togglebtn">Toggle on/off</button>
+	<p class="very-fast">This one will fade in/out very fast</p>
+	<p class="normal">This one will fade in/out with default speed</p>
+	<p class="fast">This one will fade in/out fast</p>
+	<p class="slow">This one will fade in/out slow</p>
+	<p class="very-slow">This one will fade in/out very slow</p>
+</body>
+</html>

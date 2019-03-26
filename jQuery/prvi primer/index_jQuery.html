@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <script>
+
+        
+        /*
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#p2").hide();
+            })
+        })
+        */
+        
+        /*
+        $(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+        */
+        
+         /*       
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").animate({left: '250px'});
+            });
+        });
+        */
+        
+        $(document).ready(function(){
+		$("button").click(function(){
+			$("#div1").fadeIn(2000);
+			$("#div2").fadeIn(3000);
+			$("#div3").fadeIn(4000);
+		});
+	});
+        
+    </script>
+</head>
+    <h1>Fade in effect with different params</h1>
+	
+	<button>Test effect</button><br/><br/>
+	
+	<div id="div1" style="width:100px;height:100px;display:none;background-color:greenyellow"></div>
+	<br/>
+	<div id="div2" style="width:100px;height:100px;display:none;background-color:red"></div>
+	<br/>
+	<div id="div3" style="width:100px;height:100px;display:none;background-color:black"></div>
+    
+    <!--
+    <h1>try to animate</h1>
+    
+    <button>test efect</button><br/><br/>
+    
+    <div id="div1" style="width: 100px; height:100px; background-color: greenyellow; position:absolute;"></div> <br/>
+    -->
+    <!--
+    <h2>h2</h2>
+    <p>p1</p>
+    <p id="p2">p2</p>
+    
+    <button id="hide">hide</button>
+-->
+-->
+    
+    <!--
+    <h2>h2</h2>
+    <p>p1</p>
+    <p>p2</p>
+    
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+-->
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Fade and toggle together</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		p {
+			padding:20px;
+			background: #DDA0DD;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".togglebtn").click(function(){
+				$("p").fadeToggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button type="button" class="togglebtn">Toggle on/off</button>
+	<p>Paragraph1</p>
+	<p>Paragraph2</p>
+</body>
+</html>

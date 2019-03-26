@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Toggling class on and off</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+	p {
+		padding: 10px;
+		cursor: pointer;
+		font: bold 20px sans-serif;
+	}
+	
+	.highlight {
+		background: yellow;
+	}	
+</style>	
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("p").click(function(){
+			$(this).toggleClass("highlight");
+		});
+	});
+</script>
+</head>
+<body>
+	<p>Click me to turn highlight on and off</p>
+	<p class="highlight">Click me to turn highlight on and off</p>
+	<p>Click me to turn highlight on and off</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>JQuery Method chaining</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		p {
+			width: 200px;
+			padding: 40px 0;
+			font: bold 24px sans-serif;
+			text-align: center;
+			background: #aaccaa;
+			border: 1px solid #63a063;
+			box-sizing: border-box;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".start").click(function(){
+				$("p").animate({width:"100%"}).animate({fontSize: "40px"}).animate({borderWidth: "30px"});
+			});
+			$(".reset").click(function(){
+				$("p").removeAttr("style");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Hello, welcome to our site!</p>
+	<button type="button" class="start">Start Animation</button>
+	<button type="button" class="reset">Reset</button>
+</body>
+</html>

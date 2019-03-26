@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Resizable</title>
+	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<style>
+		.ui-widget-header{
+			background:#b9cd6d;
+			border: 1px solid #b9cd6d;
+			color: #FFFFFF;
+			font-weight: bold;
+		}
+		.ui-widget-content{
+			background: #cedc98;
+			border: 1px solid #DDDDDD;
+			color: #333333;
+		}
+		
+		#resizable1,#resizable2 {
+			width:150px;
+			height:150px;
+			padding: 0.5em;
+			text-align: center;
+			margin: 0;
+		}
+	</style>
+	<script>
+		$(function(){
+			$("#resizable1").resizable({animate:true});
+			$("#resizable2").resizable({ghost:true});
+		});
+	</script>
+</head>
+<body>
+	<div id="resizable1" class="ui-widget-content">
+		<h3 class="ui-widget-header">
+			Pull my edges to see the animation
+		</h3>
+	</div>
+	
+	<div id="resizable2" class="ui-widget-content">
+		<h3 class="ui-widget-header">
+			Ghost animation
+		</h3>
+	</div>
+	
+</body>
+</html>

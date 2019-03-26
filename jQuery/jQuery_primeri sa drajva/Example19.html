@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Remove attributes from the element with JQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+	a {
+		font-size: 20px;
+		margin-right: 20px;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("a").removeAttr("href");
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<p>
+			<a href="https://singidunum.ac.rs">Home</a>
+			<a href="https://singidunum.ac.rs/page/o-nama">About</a>
+			<a href="https://singidunum.ac.rs/contact/studentski-servis">Contact</a>
+		</p>
+		
+		<button type="button">Remove attribute</button>
+	</div>
+</body>
+</html>
