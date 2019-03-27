@@ -5,63 +5,172 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>do12h</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="js/validation.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dark-hive/jquery-ui.css">
 </head>
 
 <body>
-    <div id="inputForm">
-        <form action="http://cruise.ariwebsite.com/" method="get" onsubmit="return validate(this);">
-
-            <label for="un">Username:</label>
-            <input id="un" type="text" name="username" onkeydown="usernameValidation()" required><br />           
-            <span id="unAlert"></span><br />
-
-            <label for="pass">Password:</label>
-            <input id="pass" type="password" name="password" onkeydown="passwordValidation()" required><br />
-            <span id="passAlert"></span><br />
-
-            <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email" onkeydown="emailValidation()" required><br />
-            <span id="emailAlert"></span><br />
-
-            
-            <label for="comment">Comment:</label>
-            <textarea id="comment" rows="4" cols="50" placeholder="Comment..."></textarea>
-            <br /><br />
-            
-            <label for="datepicker">Date of birth:</label>
-            <input type="text" id="datepicker"><br />
-
-            <label for="gender">Gender:</label><br />           
-            <input id="gender" type="radio" name="genderradio">Male<br />
-            <input type="radio" name="genderradio">female<br />
-            <br />
-
-            <label for="country">Country:</label>
-            <select id="country" name="dropdownlist">
-                <option value="" selected disabled hidden>Choose your Country</option>
-                <option value="serbia">Serbia</option>
-                <option value="cuba">Cuba</option>
-                <option value="nicaragua">Nicaragua</option>
-            </select><br />
-
-            <input id="reset" type="reset" name="reset" value="reset"><br /><br /><br />
-            
-            <label for="agreeId">I agree with terms:</label>
-            <input type="checkbox" id="agreeId"><br /><br />
-
-            <input id="submit" type="submit" value="submit"><br />
-
-
-        </form>
+    <div id="navbar">
+        <img id="navLogo" src="img/Logo.png" onclick="window.location.href = 'index.html'">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+        <div id="login">
+            <a href="registration.html">REGISTRATION</a>
+            <a href="login.html">LOGIN</a>
+        </div>
     </div>
+    <header>
 
+    </header>
+
+    <section>
+
+        <article>
+
+            <script>
+                $(function() {
+                    $("#tabs").tabs();
+                });
+
+            </script>
+
+
+            <div id="mainTabs">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#acc">Accounting</a></li>
+                        <li><a href="#finAcc">Financial Accounting</a></li>
+                        <li><a href="#accPri">Accounting Principles</a></li>
+                        <li><a href="#accSta">Accounting Standard</a></li>
+                    </ul>
+                    <div id="acc">
+                        <p>
+                            What is Accounting Theory<br /><br />
+
+                            Accounting theory is a set of assumptions, frameworks and methodologies used in the study and application of financial reporting principles. The study of accounting theory involves a review of both the historical foundations of accounting practices, as well as the way in which accounting practices are changed and added to the regulatory framework that governs financial statements and financial reporting.
+                            BREAKING DOWN Accounting Theory<br /><br />
+
+                            All theories of accounting are bound by the conceptual framework of accounting. This framework is provided by the Financial Accounting Standards Board, an independent entity that works to outline and establish the key objectives of financial reporting by businesses, both public and private. Further, accounting theory can be thought of as the logical reasoning that helps evaluate and guide accounting practices. Accounting theory, as regulatory standards evolve, also helps develop new accounting practices and procedures.
+                            Key Elements of Accounting Theory<br /><br />
+
+                            While accounting procedures are formulaic in nature, accounting theory is more qualitative in that it is a guide for effective accounting and financial reporting. The most important aspect of accounting theory is usefulness, which, in the corporate finance world, means that all financial statements should provide important information that can be used to make informed business decisions. This also means that accounting theory is intentionally flexible so that it can produce effective financial information, even when the legal environment changes.<br /><br />
+
+                            In addition to usefulness, accounting theory states that all accounting information should be relevant, reliable, comparable and consistent. What this essentially means is that all financial statements need to be accurate and adhere to the generally accepted accounting principles (GAAP). Adherence to GAAP allows the preparation of financial statements to be both consistent and comparable to a company's past financials, as well as the financials of other companies.<br /><br />
+
+                            Finally, accounting theory requires that all accounting and financial professionals operate under four assumptions. The first assumption states that a business is separate from its owners. The second affirms the belief that a company will continue to exist and not go bankrupt. The third assumes that all financial statements are prepared with dollar amounts and not with other numbers like unit production. Finally, all financial statements must be prepared on a monthly or annual basis.<br /><br />
+
+                        </p>
+                    </div>
+
+                    <div id="finAcc">
+                        <p>
+                            Financial Accounting<br /><br />
+
+                            Financial accounting utilizes a series of established accounting principles. The selection of accounting principles to use during the course of financial accounting depends on the regulatory and reporting requirements the business faces. For U.S. public companies, businesses are required to perform financial accounting in accordance with generally accepted accounting principles (GAAP). International public companies also frequently report financial statements in accordance to International Financial Reporting Standards. The establishment of these accounting principles is to provide consistent information to investors, creditors, regulators and tax authorities.
+                            Accrual Method vs. Cash Method<br /><br />
+
+                            Financial accounting may be performed using either the accrual method, cash method or a combination of the two. Accrual accounting entails recording transactions when the transactions have occurred and the revenue is recognizable. Cash accounting entails recording transactions only upon the exchange of cash. Revenue is only recorded upon the receipt of payment, and expenses are only recorded upon the payment of the obligation.
+                            Financial Accounting Reporting<br /><br />
+
+                            Financial reporting occurs through the use of financial statements. The financial statements present the five main classifications of financial data: revenues, expenses, assets, liabilities and equity. Revenues and expenses are accounted for and reported on the income statement. Financial accounting results in the determination of net income at the bottom of the income statement. Assets, liabilities and equity accounts are reported on the balance sheet. The balance sheet utilizes financial accounting to report ownership of the company's future economic benefits.
+                            Financial Accounting Vs. Managerial Accounting<br /><br />
+
+                            The key difference between financial and managerial accounting is that financial accounting aims at providing information to parties outside the organization, whereas managerial accounting information is aimed at helping managers within the organization make decisions. Financial statement preparation using accounting principles is most relevant to regulatory organizations and financial institutions. Because there are numerous accounting rules that do not translate well into business operation management, different accounting rules and procedures are utilized by internal management for internal business analysis.<br /><br />
+
+                        </p>
+                    </div>
+
+                    <div id="accPri">
+                        <p>
+                            Accounting Principles<br /><br />
+
+                            Accounting principles help govern the world of accounting according to general rules and concepts. They form the groundwork for the more complicated, detailed and legalistic rules of accounting. There are a number of principles, but some of the most notable include the revenue recognition principle, going concern principle, accrual principle and matching principle.<br /><br />
+
+                            Accounting principles differ from country to country. Since accounting principles differ across the world, investors should take caution when comparing companies from different countries. The issue of differing accounting principles is less of a concern in more mature markets. Still, caution should be used as there is still leeway for number distortion under many sets of accounting principles. U.S. GAAP is based on three important sets of rules: the basic accounting principles and guidelines, the generally accepted industry practices, and the detailed rules and standards that have been issued by the Financial Accounting Standards Board (FASB) and the Accounting Principles Board (APB).
+                            Accounting Principles and the FASB, IASB<br /><br />
+
+                            The FASB is a private sector group based in the U.S. The group has based its own detailed and comprehensive accounting rules and standards on basic accounting principles and guidelines. The international counterpart of the FASB is the International Accounting Standards Board (IASB). Driven by the increase in global trade and finance, both organizations are working together in establishing a single harmonious set of international financial reporting standards (IFRS).
+                            Generally Accepted Accounting Principles<br /><br />
+
+                            GAAP attempts to standardize and regulate the definitions, assumptions and methods used in accounting. This helps companies prepare consistent financial statements from year to year.<br /><br />
+
+                            U.S. companies are required to follow GAAP when releasing financial statements to the public. If a company's stock is publicly traded, federal law requires that its financial statements are audited by independent public accountants. The company's management and the independent accountants must certify that the financial statements and related notes were prepared in accordance with GAAP.<br /><br />
+
+                            Accounting data are not absolute or concrete, and standards such as GAAP are developed to minimize the negative effects of inconsistent data. Without GAAP, comparing financial statements of companies would be extremely difficult even within the same industry, making an apples-to-apples comparison hard. Inconsistencies and errors would also be hard to spot.
+                            <br /><br />
+                        </p>
+                    </div>
+                    <div id="accSta">
+                        <p>
+                            Accounting Standard<br /><br />
+
+                            Accounting standards relate to all aspects of an entity’s finances, including assets, liabilities, revenue, expenses and shareholders' equity. Specific examples of an accounting standard include revenue recognition, asset classification, allowable methods for depreciation, what is considered depreciable, lease classifications and outstanding share measurement.
+                            History of Accounting Standards and Purpose<br /><br />
+
+                            The American Institute of Accountants, which is now known as the American Institute of Certified Public Accountants, and the New York Stock Exchange attempted to launch the first accounting standards in the 1930s. Following this attempt came the Securities Act of 1933 and the Securities Exchange Act of 1934, which created the Securities and Exchange Commission. Accounting standards have also been established by the Governmental Accounting Standards Board for accounting principles for all state and local governments.<br /><br />
+
+                            Accounting standards specify when and how economic events are to be recognized, measured and displayed. External entities, such as banks, investors and regulatory agencies, rely on accounting standards to ensure relevant and accurate information is provided about the entity. These technical pronouncements have ensured transparency in reporting and set the boundaries for financial reporting measures.
+                            U.S. GAAP Accounting Standards<br /><br />
+
+                            The American Institute of Certified Public Accountants developed, managed and enacted the first set of accounting standards. In 1973, these responsibilities were given to the newly created Financial Accounting Standards Board. The Securities and Exchange Commission requires all listed companies to adhere to U.S. GAAP accounting standards in the preparation of their financial statements to be listed on a U.S. securities exchange. Accounting standards ensure the financial statements from multiple companies are comparable. Because all entities follow the same rules, accounting standards make the financial statements credible and allow for more economic decisions based on accurate and consistent information.
+                            International Financial Reporting Standards Accounting Standards<br /><br />
+
+                            Generally Accepted Accounting Principles are heavily used among public and private entities in the United States. The rest of the world primarily uses IFRS. Multinational entities are required to use these standards. The IASB establishes and interprets the international communities' accounting standards when preparing financial statements.<br /><br />
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </article>
+    </section>
+
+    <footer>
+
+        
+        
+        <div id="social_networks">
+            <table>
+                <tr>
+                    <td><a href="https://www.facebook.com/">
+                            <div id="fb_logo"><img src="img/fb_logo1.png" height="100%"></div>
+                        </a></td>
+                    <td><a href="https://www.linkedin.com/">
+                            <div id="in_logo"><img src="img/linkedin_logo.png" height="100%"></div>
+                        </a></td>
+                    <td><a href="https://twitter.com/">
+                            <div id="tw_logo"><img src="img/twiter_logo.png" height="100%"></div>
+                        </a></td>
+                </tr>
+            </table>
+        </div>
+        
+                
+        <div id="navFooter">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </div>
+
+
+        <img id="footerLogo" src="img/Logo.png" onclick="window.location.href = 'index.html'">
+        <div id="AllRights">
+            <p>Copyright © 2019. ARIZANOVIC creative team. All Rights Reserved</p>
+        </div>
+
+
+
+    </footer>
 
 </body>
 
 </html>
-

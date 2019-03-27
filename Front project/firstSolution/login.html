@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do12h</title>
+    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/navBar.js"></script>
+    <script src="js/validation.js"></script>
+</head>
+<body>
+    <div id="navbar">
+        <img id="navLogo" src="img/Logo.png" onclick="window.location.href = 'index.html'">
+    <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>        
+      <a href="contact.html">CONTACT</a>
+        <div id="login">
+            <a href="registration.html">REGISTRATION</a>
+            <a href="login.html">LOGIN</a>
+        </div>
+    
+    </div>
+<header>
+
+</header>
+
+<section>
+  
+  <article>
+    <div id="inputForm">
+        <form action="#" method="get" onsubmit="return validate(this);">
+
+            <label for="un">Username:</label>
+            <input id="un" type="text" name="username" onkeydown="usernameValidation()" required><br />           
+            <span id="unAlert"></span><br />
+
+            <label for="pass">Password:</label>
+            <input id="pass" type="password" name="password" onkeydown="passwordValidation()" required><br />
+            <span id="passAlert"></span><br />
+
+            <input id="submit" type="submit" value="submit"><br />
+
+        </form>
+    </div>
+
+
+    
+      
+  </article>
+</section>
+
+<footer>
+
+        
+        
+        <div id="social_networks">
+            <table>
+                <tr>
+                    <td><a href="https://www.facebook.com/">
+                            <div id="fb_logo"><img src="img/fb_logo1.png" height="100%"></div>
+                        </a></td>
+                    <td><a href="https://www.linkedin.com/">
+                            <div id="in_logo"><img src="img/linkedin_logo.png" height="100%"></div>
+                        </a></td>
+                    <td><a href="https://twitter.com/">
+                            <div id="tw_logo"><img src="img/twiter_logo.png" height="100%"></div>
+                        </a></td>
+                </tr>
+            </table>
+        </div>
+        
+                
+        <div id="navFooter">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </div>
+
+
+        <img id="footerLogo" src="img/Logo.png" onclick="window.location.href = 'index.html'">
+        <div id="AllRights">
+            <p>Copyright © 2019. ARIZANOVIC creative team. All Rights Reserved</p>
+        </div>
+
+
+
+    </footer>
+
+</body>
+
+</html>

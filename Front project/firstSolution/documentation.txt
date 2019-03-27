@@ -1,0 +1,25 @@
+=========================================
+Accounting agency basic web presentation:
+=========================================
+
+Horizontal navBar:
+javascript detect difference between current and previus scroll position and show and hide navigation bar.
+css has transition that makes motions up or down that depends of scroll motion.
+
+Footer:
+has additional duplicated navigaion bar, linked shortcuts to the social network portals,
+logo and Copyright notice. 
+
+index:
+jQuery tabs - dark-hive theme, with four tabs
+
+registration:
+username with simple 3-15 character regex,
+password with simple 3-15 character regex,
+email with complex regex,
+comment,
+date of birth input with jQuery datepicker,
+gender radio button,
+country selector,
+reset button,
+agree with terms check button
