@@ -1,0 +1,11 @@
+.footer{
+    background-color: #2d3436;
+    color: #dfe6e9;
+}
+p {
+    display: inline;
+}
+.blue-text {
+    padding-left: 5px;
+    color: #f39c12;
+}

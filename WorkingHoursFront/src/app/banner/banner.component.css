@@ -1,0 +1,10 @@
+.banner {
+    background-image: url("https://ak8.picdn.net/shutterstock/videos/34787278/thumb/1.jpg");
+    height: 200px;
+    width: 100%;
+    background-position: center;
+}
+.nav-button {
+    margin-top: 20px;
+    margin-left: 20px;
+}

@@ -1,0 +1,29 @@
+.check-links {
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    display:block;
+}
+
+
+.btn-block {
+    display:block;
+    margin-top: 70px;
+    width: 400px;
+    height:120px;
+
+}
+
+
+
+.btn-block:last-child {
+    margin-left: 20px;
+    
+}
+.check-links:last-child {
+    padding-top: 70px;
+}
+.timer-text {
+    text-align: center;
+    font-size: 250%;
+}

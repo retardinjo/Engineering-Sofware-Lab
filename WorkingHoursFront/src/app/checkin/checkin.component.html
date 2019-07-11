@@ -1,0 +1,14 @@
+<div fxLayout="row" class="check-links">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="button-form">
+      <input type="hidden" ngModel name="check_in_time" [(ngModel)]="user" >
+      <button type="submit" class="btn btn-primary btn-lg active btn-block" [disabled]="check" ><h2>Check in</h2></button>
+    </form>
+    
+
+    <form #g="ngForm" (ngSubmit)="onUpdate(g)">
+        <input type="hidden" ngModel name="check_out_time" [(ngModel)]="user" >
+        <button type="submit" class="btn btn-primary btn-lg active btn-block" [disabled]="!check" ><h2>Check out</h2></button>
+      </form>
+      
+    <span class="checked-in"></span>
+</div>

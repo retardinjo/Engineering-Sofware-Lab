@@ -1,0 +1,43 @@
+.hide {
+    display: none;
+}
+mat-footer-row mat-footer-cell {
+    justify-content: center;
+    font-style: italic;
+}
+.button-add {
+    width: 60px;
+    height: 10px;
+    background-color: blue;
+}
+.search-div {
+    margin:10px;
+}
+.search-div .search-form-field {
+    width:60%;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    height: 36px;
+}
+.search-form-field div.mat-form-field-underline {
+    display: none;
+}
+.search-form-field div.mat-form-field-infix{
+    border-top: 0px;
+}
+.search-form-field div.mat-form-field-wrapper{
+  padding-bottom: 0px;
+}
+.search-form-field div.mat-form-field-suffix button{
+    height: 32px;
+    width: 32px;
+}
+.search-div h3 {
+    font-size: 150%;
+    margin-top: 30px;
+    text-align: center;
+}
+mat-tab-group {
+    margin-top: 20px;
+}

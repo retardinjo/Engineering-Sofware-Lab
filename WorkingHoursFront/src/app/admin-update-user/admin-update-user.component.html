@@ -1,0 +1,71 @@
+<!-- <div class="container">
+  <mat-toolbar>
+    <span class="fill-remaining-space"></span>
+    <span>Appp</span>
+    <span class="fill-remaining-space"></span>
+  </mat-toolbar>
+</div> -->
+<form class="users-form"  #f="ngForm" (ngSubmit)="onSubmit(f)" >
+  <mat-grid-list cols="2" rowHeight="500px">
+    <mat-grid-tile>
+      <div class="controls-container">
+        <mat-form-field>
+            <input type="text" matInput placeholder="Your name" ngModel name="firstName"  first-name required #nameInput="ngModel" [(ngModel)]="user$.firstName">
+            
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Your surname" ngModel name="lastName"  surname required #surnameInput="ngModel" [(ngModel)]="user$.lastName">
+           
+        </mat-form-field>
+        <mat-form-field>
+                <input type="text" matInput placeholder="Your username" ngModel name="username" [(ngModel)]="user$.username"   required  #userInput="ngModel">
+                <mat-hint align="end"> {{userInput.value?.length}} / 6</mat-hint>
+              </mat-form-field>
+        <mat-form-field hintLabel="Minimum 6 characters">
+                <input type="password" matInput placeholder="Your password" ngModel name="password" [(ngModel)]="user$.password"  required minlength="6" #passInput="ngModel">
+                <mat-hint align="end"> {{passInput.value?.length}} / 6</mat-hint>
+              </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Your phone number" ngModel name="phoneNumber" [(ngModel)]="user$.phoneNumber" phone required #phoneInput="ngModel">
+            
+        </mat-form-field>
+           
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="controls-container">
+           
+            <mat-form-field>
+            	<mat-select matNativeControl [(value)]="selected" ngModel name="role"  placeholder="Choose role...">
+            	
+            		<mat-option *ngFor="let role of roles" [value]="role.roleId">{{role.roleName}}</mat-option>
+            	</mat-select>
+            	
+            </mat-form-field>
+            <mat-form-field>
+            	<mat-select matNativeControl [(value)]="selected1" ngModel name="position" placeholder="Choose position...">
+            	
+            		<mat-option *ngFor="let position of positions" [value]="position.positionId">{{position.positionName}}</mat-option>
+            	</mat-select>
+            	
+            </mat-form-field>
+            
+            	<mat-form-field>
+            <input type="text" matInput placeholder="Your email" ngModel name="email" [(ngModel)]="user$.email" email required #emailInput="ngModel">
+            
+        </mat-form-field>
+       
+            <input type="hidden" ngModel name="userId" [(ngModel)]="user$.userId" phone required #userIdInput="ngModel">
+          
+        
+            
+
+              <div class="button-row">
+                  <button type="submit" mat-raised-button color="primary">Submit</button>
+                  <button type="reset" mat-raised-button color="warn">Clear</button>
+              </div>
+              
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

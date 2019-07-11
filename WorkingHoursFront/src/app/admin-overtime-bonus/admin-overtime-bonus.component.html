@@ -1,0 +1,44 @@
+<div class="search-div">
+    <mat-form-field class="search-form-field" floatLabel="never">
+      <input matInput type="text" (keyup)="doFilter()" placeholder="Search..." [(ngModel)]="searchKey" >
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="searchKey" (click)="onSearchClear()">
+        <i class="material-icons">
+          close
+        </i> 
+      </button>
+    </mat-form-field>
+  </div>
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="bonusSource" matSort>
+      <ng-container matColumnDef="userFullName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Full name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.userFullName}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="month">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.month}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="bonus">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Overtime work bonus</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.bonus}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="loading">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+          Loading data...
+        </mat-footer-cell>
+      </ng-container>
+      <ng-container matColumnDef="noData">
+        <mat-footer-cell *matFooterCellDef colspan="6">
+          No data
+        </mat-footer-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+      <mat-row *matRowDef="let rows; columns:displayedColumns2;"></mat-row>
+      <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':bonusSource!=null}">
+      </mat-footer-row>
+      <mat-footer-row *matFooterRowDef="['noData']"  [ngClass]="{'hide':!(bonusSource!=null && bonusSource.data.length==0)}">
+      </mat-footer-row>
+    </mat-table>
+    <mat-paginator [pageSize]="4" [pageSizeOptions]="[2,4,6,8,10]"></mat-paginator>
+  </div>
+  

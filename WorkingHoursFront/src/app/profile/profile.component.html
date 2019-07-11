@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+
+                <div class="card-body">
+                    <div class="card-title mb-4">
+                        <div class="d-flex justify-content-start">
+                            <div class="image-container">
+                                <img src="http://placehold.it/150x150" id="imgProfile" class="img-thumbnail img-size" />
+                            </div>
+                            <div class="userData ml-3">
+                                <h2 class="d-block first-name">{{wholeUser?.username}}</h2>
+                                <h6 class="d-block"> Average working hours this month: <span class="first-word">{{average?.avg}}</span></h6>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs mb-4">
+                                <li class="nav-item">
+                                    <a class="nav-link active">Basic Info</a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content ml-1">
+                                <div class="tab-pane fade show active">
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-2 col-5">
+                                            <label style="font-weight:bold;">Full Name</label>
+                                        </div>
+                                        <div class="col-md-8 col-6">
+                                            {{wholeUser?.firstName}} {{wholeUser?.lastName}}
+                                        </div>
+                                    </div>
+                                    <hr />                      
+                                </div>
+                                
+
+                                <div class="row" >
+                                    <div class="col-sm-3 col-md-2 col-5">
+                                        <label style="font-weight:bold;">Overtime work date: </label>
+                                    </div>
+                                    <div class="col-md-8 col-6" style="font-weight:bold;">
+                                        Hours count:
+                                      <hr/>
+                                    </div>
+
+                                </div>
+                                <div class="row" *ngFor="let h of hours">
+                                    <div class="col-sm-3 col-md-2 col-5">
+                                        <label >  {{h.day}}</label>
+                                    </div>
+                                    <div class="col-md-8 col-6">
+                                      
+                                         {{h.hoursPerDay}}
+                                        
+                                        <hr />
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

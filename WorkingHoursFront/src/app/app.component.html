@@ -1,0 +1,49 @@
+<!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true">
+        <p>Sidenav bar</p>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="sidenav.toggle()">Show sidenav</button>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    <mat-toolbar color="primary">
+        <mat-sidenav #sidenav opened="false">
+            <p>Sidenav bar</p>
+        </mat-sidenav>
+        <div><button (click)="sidenav.toggle()" mat-icon-button color="accent">
+            <i class="material-icons">menu</i>
+        </button></div>
+        <div>Logo</div>
+        <div>
+            <a routerLink="prikaz">Blokovi</a>
+            <a routerLink="flexview">Log</a>
+        </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</mat-sidenav-container> -->
+<mat-sidenav-container>
+        <mat-sidenav #sidenav opened="false">
+            <mat-nav-list>
+                    
+                    <a mat-list-item routerLink="check-in" (click)="sidenav.toggle()"><i class="material-icons">done</i>Check in</a>
+                    <a mat-list-item routerLink="profile/{{user}}" (click)="sidenav.toggle()"><i class="material-icons">account_circle</i> Profile</a>
+                    <a *ngIf="role==='ADMIN'" mat-list-item routerLink="admin/users" (click)="sidenav.toggle()"><i class="material-icons">person_add</i> Register</a>
+                    <a *ngIf="role==='ADMIN'"mat-list-item routerLink="admin/table" (click)="sidenav.toggle()"><i class="material-icons">insert_chart</i>Statistics</a>
+                    <a *ngIf="role==='ADMIN'"mat-list-item routerLink="admin/user-list" (click)="sidenav.toggle()"><i class="material-icons" >exit_to_app</i>User list</a>
+                    <a mat-list-item href="http://localhost:8032/logout" (click)="sidenav.toggle()"><i class="material-icons">power_settings_new</i>Log out</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <mat-toolbar>
+                <div >
+                    <button (click)="sidenav.toggle()" mat-fab class="nav-button"><i class="material-icons">menu</i></button>
+                </div>
+            </mat-toolbar>
+            <div class="router-content">
+                <router-outlet></router-outlet>
+                <div class="push"></div>
+            </div>
+            <app-footer></app-footer>
+            
+        </mat-sidenav-content>
+    </mat-sidenav-container>
